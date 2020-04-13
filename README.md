@@ -5,6 +5,8 @@
 * Google Cloud Account
 * AWS account
 * Linux
+* [Docker]{https://docs.docker.com/get-docker/} 
+* [Docker-Machine]{https://docs.docker.com/machine/install-machine/}
 
 ## Install Google SDK
 
@@ -55,15 +57,12 @@ Make sure billing is activated for your project and activate required API's
 * Kubernetes
 * Cloud SQL
 * CLoud Storage
-* 
+* Cloud Container Registry
 
 #### CLI
 
 ```
-gcloud services enable --async
-gcloud services enable --async
-gcloud services enable --async
-gcloud services enable --async
+gcloud services [API_URL] --async
 ```
 
 ### Make a service account
