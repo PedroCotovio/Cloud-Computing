@@ -97,7 +97,7 @@ You can setup all credentials by running inside the main project dir
 
 or mannualy by following this instructions.
 
-### Generate the JSON key file
+### Generate the Google's JSON key file
 
 ```
 gcloud iam service-accounts keys create service-acc-gcloud.json --iam-account [NAME]@[PROJECT_ID].iam.gserviceaccount.com
@@ -116,11 +116,19 @@ cat > ~/.aws/credentials << ENDOFFILE
 aws_access_key_id = [ACCESS_KEY]
 aws_secret_access_key = [SECRET_ACCESS_KEY]
 ENDOFFILE
+cat > ~/.aws/config << ENDOFFILE
+[default]
+region=us-east-1
+ENDOFFILE
 ```
 
-## Setup dataset.csv file
 
+### Setup Kaggle credentials file
 
+```
+mkdir ~/.kaggle
+mv storage/kaggle.json ~/.gcloud
+```
 
 
 

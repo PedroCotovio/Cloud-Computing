@@ -21,3 +21,13 @@ cat > ~/.aws/credentials << ENDOFFILE
 aws_access_key_id = $ACCESS_KEY
 aws_secret_access_key = $SECRETE_ACCESS_KEY
 ENDOFFILE
+
+cat > ~/.aws/config << ENDOFFILE
+[default]
+region=us-east-1
+ENDOFFILE
+
+mkdir ~/.kaggle
+mv storage/kaggle.json ~/.gcloud
+
+
