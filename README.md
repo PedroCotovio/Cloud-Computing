@@ -89,6 +89,12 @@ unzip awscliv2.zip
 sudo ./aws/installdir
 ```
 
+### Install Kaggle CLI
+
+```
+pip3 install kaggle-cli
+```
+
 ## Configure Credentials
 
 You can setup all credentials by running inside the main project dir
@@ -122,14 +128,12 @@ region=us-east-1
 ENDOFFILE
 ```
 
-
 ### Setup Kaggle credentials file
 
 ```
 mkdir ~/.kaggle
 mv storage/kaggle.json ~/.gcloud
 ```
-
 
 
 
