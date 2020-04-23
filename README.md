@@ -5,6 +5,7 @@
 * Google Cloud Account
 * AWS account
 * Linux
+* Python3
 * [Docker]{https://docs.docker.com/get-docker/} 
 * [Docker-Machine]{https://docs.docker.com/machine/install-machine/}
 
@@ -54,15 +55,22 @@ Make sure billing is activated for your project and activate required API's
 
 * Compute Engine API
 * Translation API
-* Kubernetes
+* Kubernetes Engine
 * Cloud SQL
 * CLoud Storage
 * Cloud Container Registry
+* Filestore API
 
 #### CLI
 
 ```
-gcloud services [API_URL] --async
+gcloud services enable [API_URL] --async
+gcloud services enable file.googleapis.com --async
+gcloud services enable sqladmin --async
+gcloud services enable container.googleapis.com --async
+gcloud services enable compute.googleapis.com --async
+gcloud services enable translate.googleapis.com --async
+gcloud services enable kubernetes.googleapis.com --async
 ```
 
 ### Make a service account
@@ -109,6 +117,10 @@ aws_access_key_id = [ACCESS_KEY]
 aws_secret_access_key = [SECRET_ACCESS_KEY]
 ENDOFFILE
 ```
+
+## Setup dataset.csv file
+
+
 
 
 
