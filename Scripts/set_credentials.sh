@@ -28,6 +28,6 @@ region=us-east-1
 ENDOFFILE
 
 mkdir ~/.kaggle
-mv storage/kaggle.json ~/.gcloud
+cp Storage/kaggle.json ~/.gcloud
 
 
