@@ -37,8 +37,6 @@ export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -
 
 bash REST_API/main_init.sh
 
-sleep 60
-
 export REST_ENDPOINT=$(kubectl get services | grep "rest-api")
 
 # Web APP
