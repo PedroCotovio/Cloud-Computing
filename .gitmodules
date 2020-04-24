@@ -7,6 +7,3 @@
 [submodule "Web-APP"]
 	path = Web-APP
 	url = https://github.com/pepedro97/Web-APP
-[submodule "GCloud-Translation-With-Python"]
-	path = GCloud-Translation-With-Python
-	url = https://github.com/Gustavo-SF/GCloud-Translation-With-Python
