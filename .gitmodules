@@ -10,6 +10,3 @@
 [submodule "GCloud-Translation-With-Python"]
 	path = GCloud-Translation-With-Python
 	url = https://github.com/Gustavo-SF/GCloud-Translation-With-Python
-[submodule "Postgres_Items"]
-	path = Postgres_Items
-	url = https://github.com/pepedro97/Postgres_Items
