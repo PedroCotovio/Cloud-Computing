@@ -41,9 +41,11 @@ export REST_ENDPOINT=$(kubectl get services | grep "rest-api")
 
 # Web APP
 
-bash WEBAPP/main_init.sh
+bash Web-APP/main_init.sh
 
 export WEBAPP=$(docker-machine ip swarm-manager-2)
+
+sleep 30
 
 # Echo Endpoints
 
