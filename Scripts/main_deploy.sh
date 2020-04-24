@@ -35,9 +35,13 @@ export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -
 
 # Rest API
 
+bash REST_API/main_init.sh
+
+export SERVER_IP=
+
 # Web APP
 
-bash WEBAPP/scripts/main_init.sh
+bash WEBAPP/main_init.sh
 
 export WEBAPP=$(docker-machine ip swarm-manager-2)
 

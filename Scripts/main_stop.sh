@@ -26,7 +26,8 @@ bash Cortex/Scripts/main_finish.sh
 
 #Rest API
 
+bash REST_API/main_finish.sh
 
 #WebAPP
 
-bash Web-APP/scripts/main_finish.sh
+bash Web-APP/main_finish.sh
