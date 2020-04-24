@@ -37,7 +37,7 @@ export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -
 
 bash REST_API/main_init.sh
 
-export SERVER_IP=
+export REST_ENDPOINT=
 
 # Web APP
 
