@@ -21,7 +21,7 @@ EOF
 )
 
 gcloud auth configure-docker
-gcloud auth application-default login
+echo 'Y' | gcloud auth application-default login
 
 #Dataset
 
@@ -37,7 +37,9 @@ export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -
 
 bash REST_API/main_init.sh
 
-export REST_ENDPOINT=
+sleep 60
+
+export REST_ENDPOINT=$(kubectl get services | grep "rest-api")
 
 # Web APP
 
