@@ -92,7 +92,7 @@ sudo ./aws/installdir
 ### Install Kaggle CLI
 
 ```
-pip3 install kaggle-cli
+pip3 install kaggle
 ```
 
 ## Configure Credentials
@@ -132,7 +132,7 @@ ENDOFFILE
 
 ```
 mkdir ~/.kaggle
-cp Storage/kaggle.json ~/.gcloud
+cp Storage/kaggle.json ~/.kaggle
 ```
 
 
