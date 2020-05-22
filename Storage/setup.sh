@@ -7,9 +7,10 @@ kaggle datasets download -d cloudcomputing17/rest-api-data
 unzip rest-api-data.zip
 
 gsutil cp DummyData.csv gs://$GCLOUD_BUCKET/dataset.csv
-gsutil cp REST_API/data/stats_view.sql gs://$GCLOUD_BUCKET/stats_view.sql
-
-mv sdmanager_db.json Web-APP/sfdata/fixtures/
+gsutil cp MANUF_IBS.csv gs://$GCLOUD_BUCKET/MANUF_IBS.csv
+gsutil cp sfdata_classes.csv gs://$GCLOUD_BUCKET/sfdata_classes.csv
+gsutil cp sfdata_constrains.csv gs://$GCLOUD_BUCKET/sfdata_constrains.csv
+gsutil cp sfdata_category.csv gs://$GCLOUD_BUCKET/sfdata_category.csv
 
 rm rest-api-data.zip
 
