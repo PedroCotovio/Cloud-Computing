@@ -1,12 +1,10 @@
 #! /bin/bash
 
-cd "${0%/*}"
 
-export GOOGLE_APPLICATION_CREDENTIALS="~/.gcloud/service-acc-gcloud.json"
-export GCLOUD_BUCKET='gcloud-computing-fcul-17'
+export GOOGLE_APPLICATION_CREDENTIALS=~/.gcloud/service-acc-gcloud.json
 
 export GCP_PROJECT_ID=$(
-/usr/bin/python3 <<EOF
+python3 <<EOF
 import json
 import os
 with open(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")) as json_file:
@@ -14,6 +12,7 @@ with open(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")) as json_file:
 EOF
 )
 
+export GCLOUD_BUCKET='gcloud-computing-fcul-17'
 export BUCKET='cortex-ibs-domain-prediction'
 
 #Dataset
@@ -31,3 +30,4 @@ bash REST_API/main_finish.sh
 #WebAPP
 
 bash Web-APP/main_finish.sh
+
