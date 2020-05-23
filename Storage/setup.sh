@@ -15,5 +15,9 @@ gsutil cp sfdata_category.csv gs://$GCLOUD_BUCKET/sfdata_category.csv
 rm rest-api-data.zip
 
 rm DummyData.csv
+rm MANUF_IBS.csv
+rm sfdata_classes.csv
+rm sfdata_constrains.csv
+rm sfdata_category.csv
 
 
