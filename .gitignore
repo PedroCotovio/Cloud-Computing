@@ -4,3 +4,5 @@ Storage/sdmanager_db.json
 .idea/
 
 Storage/.ipynb_checkpoints/
+
+*.zip
