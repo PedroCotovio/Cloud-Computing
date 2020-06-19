@@ -1,6 +1,3 @@
-[submodule "REST_API"]
-	path = REST_API
-	url = https://github.com/pepedro97/REST_API
 [submodule "Cortex"]
 	path = Cortex
 	url = https://github.com/pepedro97/Cortex
