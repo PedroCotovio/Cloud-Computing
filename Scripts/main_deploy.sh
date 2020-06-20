@@ -5,7 +5,7 @@
 export WORKERS=4
 export SDMANAGER_REPLICAS=5
 export BUCKET='cortex-ibs-domain-prediction'
-export GCLOUD_BUCKET='gcloud-computing-fcul-17'
+export GCLOUD_BUCKET='gcloud-computing-fcul'
 
 # Credentials
 
@@ -35,9 +35,24 @@ export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -
 
 # Rest API
 
-bash REST_API/main_init.sh
+bash Rest_API/main_init.sh
 
-export REST_ENDPOINT=$(kubectl get services | grep "rest-api")
+export REST_ENDPOINT_FULL=$(kubectl get ingress | grep "api-ingress")
+export REST_ENDPOINT=$(
+python3 <<EOF
+import os
+ip = os.environ.get("REST_ENDPOINT_FULL")
+ip = ip.split(' ')
+for var in ip:
+     try:
+        test = int(var[0])
+        print(var)
+        break
+     except:
+        pass
+
+EOF
+)
 
 # Web APP
 
