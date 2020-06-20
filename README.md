@@ -44,6 +44,9 @@ gcloud projects create "[PROJECT_ID]" \
 
 or use the GUI console.
 
+If you create a project with a non-default region or zone, make sure to check region vars 
+are correctly configured thorough out the project.
+
 ### Activate APIs
 
 Make sure billing is activated for your project and activate required API's
