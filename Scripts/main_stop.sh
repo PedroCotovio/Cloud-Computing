@@ -15,17 +15,24 @@ EOF
 export GCLOUD_BUCKET='gcloud-computing-fcul-17'
 export BUCKET='cortex-ibs-domain-prediction'
 
+export GCP_REGION='us-central1'
+export SPARK_CLUSTER=pyspark-cluster
+
 #Dataset
 
 bash Storage/clean.sh
 
+#Rest API
+
+bash Rest_API/main_finish.sh
+
+#Spark
+
+bash Spark/main_finish.sh
+
 #Cortex
 
 bash Cortex/Scripts/main_finish.sh
-
-#Rest API
-
-bash REST_API/main_finish.sh
 
 #WebAPP
 

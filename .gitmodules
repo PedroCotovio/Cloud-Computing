@@ -7,3 +7,6 @@
 [submodule "Spark-CN"]
 	path = Spark-CN
 	url = git@github.com:Gustavo-SF/Spark-CN.git
+[submodule "Rest_API"]
+	path = Rest_API
+	url = git@github.com:pepedro97/Rest_API.git

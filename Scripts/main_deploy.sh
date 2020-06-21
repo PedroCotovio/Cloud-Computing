@@ -54,6 +54,17 @@ EOF
 
 bash Spark-CN/main_init.sh
 
+export SC=$(gcloud dataproc clusters list --region=$GCP_REGION | grep "pyspark-cluster"| head -1)
+export CONFIRM=$(
+python3 <<EOF
+import os
+cluster = os.environ.get("SPARK_CLUSTER")
+sc = os.environ.get("SC")
+conf = cluster.split(' ')[0]
+if conf == cluster: print('OK')
+EOF
+)
+
 # Cortex
 
 bash Cortex/Scripts/main_init.sh
@@ -70,15 +81,6 @@ sleep 30
 
 # Echo Endpoints
 
-## Cortex
-
-if [ -z ${ENDPOINT} ]
-then
-  echo "Cortex not running"
-else
-  echo "Cortex running at '$ENDPOINT'"
-fi
-
 ## Rest API
 
 if [ -z ${REST_ENDPOINT} ]
@@ -86,6 +88,24 @@ then
   echo "Rest API not running"
 else
   echo "Rest API running at '$REST_ENDPOINT'"
+fi
+
+## SPARK
+
+if [ -z ${CONFIRM} ]
+then
+  echo "SPARK Cluster not running"
+else
+  echo "SPARK Cluster running at '$SPARK_CLUSTER'"
+fi
+
+## Cortex
+
+if [ -z ${ENDPOINT} ]
+then
+  echo "Cortex not running"
+else
+  echo "Cortex running at '$ENDPOINT'"
 fi
 
 ## WEB APP
@@ -99,6 +119,5 @@ fi
 
 #Open Web APP in firefox
 
-PORT=8080
 /usr/bin/firefox $WEBAPP
-/usr/bin/firefox --new-window $WEBAPP:$PORT
+/usr/bin/firefox --new-window $WEBAPP:8080
