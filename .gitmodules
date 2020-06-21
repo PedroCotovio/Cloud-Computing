@@ -4,3 +4,6 @@
 [submodule "Web-APP"]
 	path = Web-APP
 	url = https://github.com/pepedro97/Web-APP
+[submodule "Spark-CN"]
+	path = Spark-CN
+	url = git@github.com:Gustavo-SF/Spark-CN.git

@@ -29,12 +29,6 @@ echo 'Y' | gcloud auth application-default login
 
 bash Storage/setup.sh
 
-# Cortex
-
-bash Cortex/Scripts/main_init.sh
-
-export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -1)
-
 # Rest API
 
 bash Rest_API/main_init.sh
@@ -55,6 +49,16 @@ for var in ip:
 
 EOF
 )
+
+# Spark
+
+bash Spark-CN/main_init.sh
+
+# Cortex
+
+bash Cortex/Scripts/main_init.sh
+
+export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -1)
 
 # Web APP
 
