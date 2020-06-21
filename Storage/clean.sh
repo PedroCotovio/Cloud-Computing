@@ -1,3 +1,3 @@
 #! /bin/bash
 
-gsutil rm -r gs://$GCLOUD_BUCKET
+gsutil -m rm -r gs://$GCLOUD_BUCKET
