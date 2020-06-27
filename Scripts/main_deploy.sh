@@ -4,7 +4,7 @@
 
 export WORKERS=4
 export SDMANAGER_REPLICAS=5
-export BUCKET='cortex-ibs-domain-prediction'
+export BUCKET='cortex-ibs-domain-prediction-2'
 export GCLOUD_BUCKET='gcloud-computing-fcul'
 export GCP_REGION='us-central1'
 export SPARK_CLUSTER=pyspark-cluster

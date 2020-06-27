@@ -1,6 +1,7 @@
 #! /bin/bash
 
 gsutil mb -b on -l $GCP_REGION gs://$GCLOUD_BUCKET/
+gsutil mb -b on -l $GCP_REGION gs://dataproc-staging-us-central1-127237410780-kbeanwbn
 
 kaggle datasets download -d cloudcomputing17/rest-api-data
 
