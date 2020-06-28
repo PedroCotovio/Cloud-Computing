@@ -12,8 +12,8 @@ with open(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")) as json_file:
 EOF
 )
 
-export GCLOUD_BUCKET='gcloud-computing-fcul-17'
-export BUCKET='cortex-ibs-domain-prediction'
+export GCLOUD_BUCKET='gcloud-computing-fcul'
+export BUCKET='cortex-ibs-domain-prediction-2'
 
 export GCP_REGION='us-central1'
 export SPARK_CLUSTER=pyspark-cluster
@@ -28,7 +28,7 @@ bash Rest_API/main_finish.sh
 
 #Spark
 
-bash Spark/main_finish.sh
+bash Spark-CN/main_finish.sh
 
 #Cortex
 
