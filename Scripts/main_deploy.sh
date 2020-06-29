@@ -70,6 +70,13 @@ EOF
 bash Cortex/Scripts/main_init.sh
 
 export ENDPOINT=$(cortex get domain-classifier-batch | grep "endpoint:" | head -1)
+export ENDPOINT=$(
+python3 <<EOF
+import os
+ip = os.environ.get("ENDPOINT")
+print(ip.replace('endpoint: ', ''))
+EOF
+)
 
 # Web APP
 
