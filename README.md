@@ -6,9 +6,9 @@
 * AWS account
 * Linux
 * Python3
-* {kubectl}[https://kubernetes.io/docs/tasks/tools/install-kubectl/]
-* {Docker}[https://docs.docker.com/get-docker/]
-* {Docker-Machine}[https://docs.docker.com/machine/install-machine/]
+* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker-Machine](https://docs.docker.com/machine/install-machine/)
 
 ## Install Google SDK
 
