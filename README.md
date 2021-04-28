@@ -1,4 +1,6 @@
-# Cloud Computing
+# Cloud Computing FCUL 19/20 
+
+This work was developed as the final project of FCUL's 2019/2020 edition of the [Cloud Computing course](https://fenix.ciencias.ulisboa.pt/courses/cn-4-2254879305237525/pagina-inicial)
 
 ## Requirements
 
